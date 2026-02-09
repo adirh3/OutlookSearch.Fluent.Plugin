@@ -6,11 +6,13 @@ namespace OutlookSearch.Fluent.Plugin;
 
 public sealed class OutlookSearchSettingsPage : SearchApplicationSettingsPage
 {
+    private static readonly ISolidColorBrush DodgerBlue = new SolidColorBrush(Color.FromRgb(30, 144, 255));
+
     public OutlookSearchSettingsPage(SearchApplicationInfo searchApplicationInfo)
         : base(searchApplicationInfo)
     {
         SettingLevel = 2;
-        IconGlyphColor = Brushes.DodgerBlue;
+        IconGlyphColor = DodgerBlue;
     }
 
     // ── Email search ──
