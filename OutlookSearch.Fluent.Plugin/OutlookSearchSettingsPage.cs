@@ -1,4 +1,5 @@
 using Avalonia.Media;
+using Avalonia.Media.Immutable;
 using Blast.API.Settings;
 using Blast.Core.Objects;
 
@@ -6,13 +7,11 @@ namespace OutlookSearch.Fluent.Plugin;
 
 public sealed class OutlookSearchSettingsPage : SearchApplicationSettingsPage
 {
-    private static readonly ISolidColorBrush DodgerBlue = new SolidColorBrush(Color.FromRgb(30, 144, 255));
-
     public OutlookSearchSettingsPage(SearchApplicationInfo searchApplicationInfo)
         : base(searchApplicationInfo)
     {
         SettingLevel = 2;
-        IconGlyphColor = DodgerBlue;
+        IconGlyphColor = new ImmutableSolidColorBrush(Color.FromRgb(30, 144, 255));
     }
 
     // ── Email search ──
